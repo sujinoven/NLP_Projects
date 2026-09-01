@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Clause Similarity Engine | NLP Semantic Search</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo-area">
+                <div class="logo-icon">⚖️</div>
+                <div>
+                    <h1 class="app-title">Legal Clause Similarity Engine</h1>
+                    <p class="app-subtitle">Find semantically similar legal clauses using Word2Vec</p>
+                </div>
+            </div>
+            <div class="badge-status" id="apiStatusBadge">
+                <span class="status-dot"></span> <span id="apiStatusText">Checking API Connection...</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container main-content">
+        
+        <!-- Search Section -->
+        <section class="card search-card">
+            <div class="card-header">
+                <h2>Semantic Clause Search</h2>
+                <div class="word-counter" id="wordCounter">Words: 0 | Characters: 0</div>
+            </div>
+
+            <form id="searchForm" onsubmit="return false;">
+                <div class="input-group">
+                    <label for="clauseInput">Enter Legal Clause, Sentence, or Paragraph:</label>
+                    <textarea 
+                        id="clauseInput" 
+                        name="clause" 
+                        rows="4" 
+                        placeholder="Enter a legal clause, sentence, or paragraph..."
+                        required
+                    ></textarea>
+                </div>
+
+                <!-- Clickable Example Clause Chip -->
+                <div class="example-container">
+                    <span class="example-label">Try Example:</span>
+                    <button type="button" class="example-chip" id="exampleBtn">
+                        "The tenant shall pay the monthly rent before the fifth day of each month."
+                    </button>
+                </div>
+
+                <!-- Controls & Actions -->
+                <div class="search-controls">
+                    <div class="control-group">
+                        <label for="topKSelect">Number of Results:</label>
+                        <select id="topKSelect" class="select-dropdown">
+                            <option value="3">3 Results</option>
+                            <option value="5" selected>5 Results</option>
+                            <option value="10">10 Results</option>
+                        </select>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button type="button" class="btn btn-secondary" id="clearBtn">
+                            Clear
+                        </button>
+                        <button type="submit" class="btn btn-primary" id="searchBtn">
+                            <span class="btn-text">Find Similar Clauses</span>
+                            <span class="btn-spinner" id="btnSpinner" style="display: none;"></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- Error Notification Area -->
+        <div class="error-banner" id="errorBanner" style="display: none;">
+            <div class="error-icon">⚠️</div>
+            <div class="error-message" id="errorMessage">Unable to find similar clauses. Please enter a valid legal clause.</div>
+        </div>
+
+        <!-- NLP Preprocessing Information Bar -->
+        <section class="nlp-info-bar card" id="nlpInfoBar" style="display: none;">
+            <div class="nlp-info-content">
+                <span class="nlp-title">🔍 Processed NLP Tokens:</span>
+                <div class="token-chips" id="tokenChips">
+                    <!-- Tokens populated dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section">
+            <div class="results-header">
+                <h2>Similar Legal Clauses</h2>
+                <span class="stats-badge" id="statsBadge" style="display: none;">0 clauses found</span>
+            </div>
+
+            <!-- Loading Indicator Container -->
+            <div class="loading-container" id="loadingContainer" style="display: none;">
+                <div class="spinner"></div>
+                <p>Searching legal clauses with Word2Vec...</p>
+            </div>
+
+            <!-- Empty Results State -->
+            <div class="empty-state" id="emptyState">
+                <div class="empty-icon">📜</div>
+                <h3>No Results Yet</h3>
+                <p>Enter a legal clause above and click <strong>"Find Similar Clauses"</strong> to view semantically matching clauses from our database.</p>
+            </div>
+
+            <!-- Result Cards List Container -->
+            <div class="results-list" id="resultsList">
+                <!-- Dynamic clause cards inserted here -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p><strong>Legal Clause Similarity Engine</strong> — Powered by FastAPI & Gensim Word2Vec</p>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

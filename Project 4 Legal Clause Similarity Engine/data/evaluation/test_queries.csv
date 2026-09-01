@@ -1,0 +1,4 @@
+query,expected_clause_type
+"The tenant shall pay rent within 30 days",Payment
+"The agreement can be terminated by either party",Termination
+"All confidential information must remain private",Confidentiality
