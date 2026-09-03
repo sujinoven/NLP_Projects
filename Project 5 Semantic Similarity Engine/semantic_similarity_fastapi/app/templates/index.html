@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ app_name }}</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-badge">NLP Retrieval Demo</div>
+      <h1>Semantic Similarity Search</h1>
+      <p>
+        Search the knowledge base with TF-IDF, Word2Vec, or FastText
+        and compare lexical and semantic retrieval behavior.
+      </p>
+    </header>
+
+    <main>
+      <section class="search-panel card">
+        <form id="search-form">
+          <label for="query">Search query</label>
+          <div class="query-row">
+            <input
+              id="query"
+              type="text"
+              placeholder="Example: I forgot my password and cannot login"
+              autocomplete="off"
+              required
+            />
+            <button type="submit" id="search-button">Search</button>
+          </div>
+
+          <div class="controls">
+            <div>
+              <label for="model">Model</label>
+              <select id="model">
+                <option value="fasttext">FastText</option>
+                <option value="word2vec">Word2Vec</option>
+                <option value="tfidf">TF-IDF</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="top-k">Top K</label>
+              <input id="top-k" type="number" min="1" max="100" value="5" />
+            </div>
+
+            <div class="compare-control">
+              <label class="checkbox-label">
+                <input id="compare" type="checkbox" />
+                Compare all models
+              </label>
+            </div>
+          </div>
+        </form>
+
+        <div class="examples">
+          <span>Try:</span>
+          <button class="example-query" data-query="I forgot my password and cannot login">
+            Password reset
+          </button>
+          <button class="example-query" data-query="I cannot get into my account anymore">
+            Account access
+          </button>
+          <button class="example-query" data-query="I forgot my passwrd and cannot loginn">
+            OOV test
+          </button>
+        </div>
+      </section>
+
+      <section id="status" class="status hidden"></section>
+
+      <section id="results" class="results"></section>
+    </main>
+
+    <footer>
+      FastAPI · scikit-learn · Gensim · Cosine Similarity
+    </footer>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

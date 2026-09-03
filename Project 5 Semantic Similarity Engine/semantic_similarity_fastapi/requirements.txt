@@ -1,0 +1,17 @@
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
+jinja2==3.1.6
+python-multipart==0.0.20
+
+numpy==1.26.4
+scipy==1.12.0
+pandas==2.2.3
+scikit-learn==1.6.1
+gensim==4.3.3
+
+joblib==1.5.2
+nltk==3.9.1
+pydantic==2.11.7
+python-dotenv==1.1.1
+pytest==8.4.1
+httpx==0.28.1
