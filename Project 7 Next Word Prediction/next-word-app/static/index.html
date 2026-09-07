@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Next Word Studio</title><link rel="stylesheet" href="/style.css"><script defer src="/app.js"></script></head>
+<body><main>
+<header><a class="brand" href="/">N<span> / </span>Next Word Studio</a><span id="status" class="badge">Checking model…</span></header>
+<section class="hero"><p class="eyebrow">OVEN'S NLP LAB · GRU LANGUAGE MODEL</p><h1>A few words.<br><span>A new possibility.</span></h1><p class="intro">Explore what comes next. Start a business or sports phrase and let your trained model continue it.</p></section>
+<section id="setup" class="notice" hidden><strong>Add your trained model</strong><p>In the VS Code terminal, import the ZIP downloaded from Colab:</p><code>python import_bundle.py "C:\path\to\next_word_gru_bundle.zip"</code><p>Then refresh this page. The README has the complete setup steps.</p></section>
+<div class="workspace"><section class="card"><div class="section-label"><span>01 / YOUR INPUT</span><span>Up to 20 words of context</span></div>
+<form id="generate-form"><label for="seed">Start a thought</label><textarea id="seed" maxlength="3000" rows="5" placeholder="the company reported" required></textarea>
+<div class="examples"><span>Try a phrase</span><button type="button" data-seed="the company reported">Business</button><button type="button" data-seed="the team won the">Sports</button><button type="button" data-seed="the price of oil">Markets</button></div>
+<div class="controls"><div><label for="count">New words</label><input id="count" type="number" min="1" max="50" value="10" required></div><button class="primary" id="generate" type="submit" disabled>Generate continuation ↗</button></div></form><p id="message" role="status" aria-live="polite"></p></section>
+<section class="card output"><div class="section-label"><span>02 / CONTINUATION</span><button id="copy" type="button" hidden>Copy text</button></div><p id="result" class="result">Your next thought starts here.</p><p id="warnings" class="muted"></p><div id="suggestion-area" hidden><h3>Next-word suggestions</h3><p class="muted">Top five for your original phrase</p><div id="suggestions"></div></div></section></div>
+<section class="card detail" id="details" hidden><div class="section-label">03 / HOW IT UNFOLDED</div><div class="table-wrap"><table><thead><tr><th>Step</th><th>Generated word</th><th>Model probability</th></tr></thead><tbody id="steps"></tbody></table></div></section>
+<footer>Trained on business &amp; sports articles · Greedy generation · Suggestions reflect learned language patterns, not verified facts.<br>Probabilities are per word. Padding and unknown tokens are excluded from suggestions.</footer>
+</main></body></html>
