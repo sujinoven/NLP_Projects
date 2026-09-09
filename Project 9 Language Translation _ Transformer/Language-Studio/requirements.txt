@@ -1,0 +1,7 @@
+streamlit>=1.45,<2
+torch>=2.6,<3
+transformers>=4.57,<5
+sentencepiece>=0.2,<0.3
+langdetect==1.0.9
+safetensors>=0.4
+hf_xet>=1.1,<2
