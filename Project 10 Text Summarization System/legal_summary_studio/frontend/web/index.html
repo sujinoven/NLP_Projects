@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta name="description" content="Legal document summarization with Flutter and Flask.">
+  <meta name="theme-color" content="#146B62">
+  <title>Legal Summary Studio</title>
+  <style>
+    body { margin: 0; background: #f4f6f5; }
+    #startup { position: fixed; inset: 0; display: grid; place-content: center;
+      padding: 24px; text-align: center; color: #146b62;
+      font: 16px/1.6 system-ui, sans-serif; background: #f4f6f5; z-index: 10000; }
+    #startup h1 { font-size: 24px; margin: 0 0 12px; }
+    #startup p { margin: 4px; }
+  </style>
+</head>
+<body>
+  <div id="startup" role="status" aria-live="polite">
+    <h1>Legal Summary Studio</h1>
+    <p id="startup-message">Loading the app…</p>
+    <p>The first launch can take 30–60 seconds. Keep the Flutter terminal open.</p>
+  </div>
+  <noscript>This app needs JavaScript enabled in your browser.</noscript>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

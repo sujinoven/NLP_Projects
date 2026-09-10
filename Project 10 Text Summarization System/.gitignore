@@ -1,0 +1,19 @@
+# Local tooling downloaded to validate this project; never commit these.
+/.inference_dependencies/
+/.test_dependencies/
+/.tooling/
+
+# Python environments, caches, secrets and downloaded model weights.
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.env
+.model_cache/
+
+# Generated Flutter files.
+.dart_tool/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies

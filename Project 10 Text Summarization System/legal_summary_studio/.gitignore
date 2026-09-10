@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.model_cache/
+.env
+.dart_tool/
+build/
+*.pyc
