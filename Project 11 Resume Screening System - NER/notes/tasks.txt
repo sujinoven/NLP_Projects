@@ -1,0 +1,10 @@
+Task 1: Read and extract text from resume files (PDF, DOCX, TXT).
+Task 2: Load the Job Description (JD).
+Task 3: Preprocess the JD and resume text.
+Task 4: Split resumes into logical sections (Summary, Skills, Experience, Projects, Education, etc.) with a fallback for unstructured resumes.
+Task 5: Split the Job Description into structured sections (Required Skills, Responsibilities, Experience, etc.).
+Task 6: Chunk the JD and resume sections, then generate embeddings using the BGE embedding model.
+Task 7: Compare JD section embeddings with relevant resume section embeddings and collect similarity scores and supporting evidence.
+Task 8: Compute a weighted matching score, including a numeric years-of-experience check.
+Task 9: Normalize the final scores, rank all resumes, and shortlist the top candidates.
+Task 10: Extract candidate information (Name, Email, Phone, LinkedIn, GitHub) using NER and regex from the shortlisted resumes.

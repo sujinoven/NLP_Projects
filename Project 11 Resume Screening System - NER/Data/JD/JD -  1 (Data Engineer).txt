@@ -1,0 +1,28 @@
+
+Title: Senior Data Engineer
+Location: Bengaluru (Hybrid)
+ 
+About the role:
+We are looking for a Senior Data Engineer to design and operate large-scale batch and
+streaming data pipelines that power our analytics and ML platforms. You will own
+pipeline reliability, data warehousing, and real-time ingestion.
+ 
+Responsibilities:
+- Design, build, and maintain scalable ETL/ELT pipelines.
+- Build real-time streaming ingestion and processing.
+- Own and optimize the cloud data warehouse serving analysts and data scientists.
+- Ensure pipeline reliability, data quality, and performance at scale.
+ 
+Required skills (must-have):
+- 5+ years of data engineering experience
+- Strong SQL and Python
+- Apache Spark
+- Apache Airflow
+- Apache Kafka (streaming)
+- Cloud data platform (AWS strongly preferred)
+- ETL/ELT and data warehousing
+ 
+Nice to have:
+- Snowflake, dbt, Databricks
+- Terraform / infrastructure-as-code
+ 

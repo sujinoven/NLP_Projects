@@ -1,0 +1,67 @@
+## Title: Data Analyst – Business Intelligence
+
+**Location:** Pune, India (Hybrid)
+**Experience Required:** 2–5 Years
+**Employment Type:** Full-Time
+
+### About the Role
+
+We are looking for a highly motivated **Data Analyst – Business Intelligence** to join our Analytics team. In this role, you will transform raw business data into meaningful insights that drive strategic decision-making across multiple business functions. You will collaborate with cross-functional teams, including Product, Marketing, Sales, Finance, and Operations, to understand business requirements, build insightful dashboards, perform statistical analyses, and provide actionable recommendations.
+
+The ideal candidate is passionate about data, has strong analytical thinking, and enjoys solving complex business problems through data visualization and reporting. You should be comfortable working with large datasets, creating automated reporting solutions, and communicating insights to both technical and non-technical stakeholders.
+
+---
+
+## Key Responsibilities
+
+* Design, develop, and maintain interactive dashboards and self-service reporting solutions using Power BI, Tableau, or similar BI tools.
+* Write efficient and optimized SQL queries to extract, clean, transform, and analyze large datasets from multiple data sources.
+* Analyze business KPIs, customer behavior, product performance, and operational metrics to identify trends, opportunities, and risks.
+* Conduct A/B testing and statistical analyses to evaluate product features, marketing campaigns, and business initiatives.
+* Partner with Product Managers, Business Analysts, Marketing teams, and senior leadership to understand analytical requirements and provide data-driven recommendations.
+* Automate recurring reports and data pipelines to improve reporting efficiency and reduce manual effort.
+* Perform data validation and quality checks to ensure accuracy, consistency, and reliability of reports.
+* Create executive-level presentations and visualizations that clearly communicate business insights and recommendations.
+* Monitor key business metrics and proactively identify anomalies or performance issues.
+* Support ad hoc analytical requests from business stakeholders.
+* Document reporting processes, data definitions, and dashboard specifications for knowledge sharing and maintainability.
+
+---
+
+## Required Skills (Must-Have)
+
+* Bachelor's degree in Statistics, Mathematics, Computer Science, Economics, Business Analytics, or a related field.
+* **2+ years** of experience as a Data Analyst or Business Intelligence Analyst.
+* Strong proficiency in **SQL**, including complex joins, window functions, CTEs, and query optimization.
+* Hands-on experience with **Power BI** and/or **Tableau** for dashboard development and reporting.
+* Advanced knowledge of **Microsoft Excel**, including Pivot Tables, Power Query, Power Pivot, lookup functions, and data analysis.
+* Experience in creating interactive dashboards and meaningful data visualizations.
+* Strong understanding of **A/B Testing**, hypothesis testing, statistical analysis, and business metrics.
+* Experience preparing reports and presenting insights to business stakeholders.
+* Excellent analytical, problem-solving, and communication skills.
+* Ability to work with cross-functional teams in a fast-paced environment.
+
+---
+
+## Preferred Skills (Nice-to-Have)
+
+* Experience using **Python** (Pandas, NumPy, Matplotlib, Seaborn) for data analysis and automation.
+* Familiarity with **Google Analytics**, **Looker**, **Metabase**, or similar BI platforms.
+* Knowledge of ETL processes and data warehousing concepts.
+* Understanding of data modeling and dimensional modeling techniques.
+* Experience with cloud platforms such as AWS, Azure, or Google Cloud Platform.
+* Basic knowledge of version control tools such as Git.
+* Exposure to machine learning concepts and predictive analytics.
+* Experience working in Agile or Scrum environments.
+
+
+## What We Offer
+
+* Opportunity to work on large-scale business analytics projects.
+* Exposure to cross-functional teams and strategic decision-making.
+* Learning and development opportunities with the latest BI and analytics tools.
+* Flexible hybrid work environment.
+* Competitive salary and performance-based incentives.
+* Health insurance and wellness benefits.
+* Collaborative and innovation-driven work culture.
+* Career growth opportunities within the Analytics organization.

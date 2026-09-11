@@ -1,0 +1,39 @@
+# Node dependencies & builds
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+
+# Python virtual environments & bytecode
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testing & Notebooks
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Environment files (allow .env.example)
+.env
+.env.local
+.env.development
+.env.production
+!.env.example
+backend/.env
+frontend/.env
+
+# Temporary files & uploads
+backend/temp_uploads/
+backend/exports/
+*.log
+*.tmp
+*.temp
+
+# Model caches
+.cache/
+huggingface/

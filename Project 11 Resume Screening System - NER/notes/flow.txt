@@ -1,0 +1,64 @@
+
+JD pipeline:
+
+Read the file
+
+Preprocess
+
+Separate based on sections
+
+Convert to embeddings
+
+Store them
+
+Resume pipeline:
+
+Read the file
+
+Preprocess
+
+Separate based on sections
+
+Convert to embeddings
+
+Compare each resume with the JD embeddings
+
+
+JD embeddings + Resume embeddings
+↓
+Compare
+↓
+Generate score
+↓
+Rank them
+↓
+Use NER pipeline to extract common details
+↓
+Table them
+
+
+
+
+
+task split 
+Extract text from PDFs/docs / parse resumes
+
+Save the resume records — for now, use DataFrame
+
+Load job description
+
+Create a pipeline for preprocessing both JD and resume
+
+Write logic for splitting resume into sections
+
+Write logic for splitting JD
+
+Compare semantic meaning of JD and resume using section splitting
+
+Create a score for each resume
+
+Create a rank table for resumes in order
+
+Create an NER pipeline to extract names, contact information, etc.
+
+Show the result
