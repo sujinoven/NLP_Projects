@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Extractive Question Answering AI Web Application powered by DistilBERT trained on SQuAD v1.">
+    <title>Extractive Question Answering AI — DistilBERT</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="brand">
+                <div class="brand-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="11" y1="8" x2="11" y2="14"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="brand-title">DistilBERT QA System</h1>
+                    <p class="brand-subtitle">Extractive Question Answering AI</p>
+                </div>
+            </div>
+
+            <!-- Health Status Badge -->
+            <div id="healthBadge" class="status-badge checking">
+                <span class="status-dot"></span>
+                <span id="healthStatusText">Checking model status...</span>
+            </div>
+        </header>
+
+        <!-- Main Content Layout -->
+        <main class="main-grid">
+            <!-- Left Column: Input Form -->
+            <section class="card input-card">
+                <div class="card-header">
+                    <h2>Input Context & Question</h2>
+                    <!-- Example Loader Dropdown -->
+                    <div class="example-selector-wrapper">
+                        <label for="exampleSelect" class="sr-only">Choose Example</label>
+                        <select id="exampleSelect" class="example-select">
+                            <option value="" disabled selected>Load Sample Example...</option>
+                            <option value="distilbert">DistilBERT Overview</option>
+                            <option value="apollo">Apollo 11 Moon Landing</option>
+                            <option value="photosynthesis">Photosynthesis Process</option>
+                        </select>
+                    </div>
+                </div>
+
+                <form id="qaForm" class="qa-form">
+                    <!-- Context Passage Field -->
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="contextInput">Context Passage <span class="required">*</span></label>
+                            <span class="char-count" id="contextCharCount">0 / 10,000</span>
+                        </div>
+                        <textarea 
+                            id="contextInput" 
+                            name="context" 
+                            rows="9" 
+                            placeholder="Paste or type the context passage here... The model will extract answers directly from this text." 
+                            required 
+                            maxlength="10000"
+                        ></textarea>
+                    </div>
+
+                    <!-- Question Field -->
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="questionInput">Question <span class="required">*</span></label>
+                            <span class="char-count" id="questionCharCount">0 / 500</span>
+                        </div>
+                        <input 
+                            type="text" 
+                            id="questionInput" 
+                            name="question" 
+                            placeholder="Ask a question about the context above..." 
+                            required 
+                            maxlength="500"
+                        />
+                    </div>
+
+                    <!-- Form Controls -->
+                    <div class="form-actions">
+                        <button type="submit" id="submitBtn" class="btn btn-primary">
+                            <span class="btn-text">Get Answer</span>
+                            <span class="spinner" id="btnSpinner" hidden></span>
+                        </button>
+                        <button type="button" id="clearBtn" class="btn btn-secondary">Clear</button>
+                    </div>
+                </form>
+
+                <!-- Disclaimer Box -->
+                <div class="disclaimer-callout">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <div>
+                        <strong>Extractive Model Notice (SQuAD v1):</strong> Answers are strictly extracted verbatim from the passage provided. The model is trained to find the most probable text segment and cannot reliably detect questions whose answers are absent from the text.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Column: Results Output -->
+            <section class="card output-card">
+                <div class="card-header">
+                    <h2>Extracted Answer</h2>
+                    <span id="resultBadge" class="badge badge-muted">Awaiting Input</span>
+                </div>
+
+                <!-- Alert Message Banner -->
+                <div id="errorBanner" class="alert alert-error" hidden></div>
+
+                <!-- Empty State Placeholder -->
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3>No Answer Generated Yet</h3>
+                    <p>Enter a passage and ask a question, or pick a sample from the dropdown to test the model.</p>
+                </div>
+
+                <!-- Results Display Container -->
+                <div id="resultsContainer" class="results-container" hidden>
+                    <!-- Highlighted Extracted Answer Box -->
+                    <div class="answer-box">
+                        <div class="answer-label">Top Extracted Span</div>
+                        <div class="answer-text" id="answerText">—</div>
+                    </div>
+
+                    <!-- Metadata Badges -->
+                    <div class="meta-grid">
+                        <div class="meta-card">
+                            <span class="meta-label">Character Start</span>
+                            <span class="meta-value" id="startCharValue">0</span>
+                        </div>
+                        <div class="meta-card">
+                            <span class="meta-label">Character End</span>
+                            <span class="meta-value" id="endCharValue">0</span>
+                        </div>
+                        <div class="meta-card">
+                            <span class="meta-label">Logit Score</span>
+                            <span class="meta-value" id="scoreValue">0.0</span>
+                        </div>
+                    </div>
+
+                    <!-- Highlighted Context View -->
+                    <div class="highlighted-context-wrapper">
+                        <div class="context-label">Passage Context with Highlighted Answer:</div>
+                        <div id="highlightedContext" class="highlighted-context"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>DistilBERT Question Answering AI System &bull; Fine-Tuned on SQuAD v1 &bull; PyTorch + FastAPI</p>
+        </footer>
+    </div>
+
+    <!-- Custom App JS -->
+    <script src="/static/app.js"></script>
+</body>
+</html>

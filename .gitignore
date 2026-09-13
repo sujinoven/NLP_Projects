@@ -90,6 +90,7 @@ data/*
 *.db
 *.sqlite
 *.sqlite3
+*.zip
 
 # =========================================================
 # ML model files / checkpoints
