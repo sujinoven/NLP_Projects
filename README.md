@@ -169,4 +169,4 @@ Generated summaries and translations can contain errors. Similarity scores, enti
 
 ## Author
 
-Maintained by [SUJINOVEN](https://github.com/sujinoven)UJINOVEN as part of an ongoing journey in machine learning, deep learning, and natural language processing.
+Maintained by [SUJINOVEN](https://github.com/sujinoven) as part of an ongoing journey in machine learning, deep learning, and natural language processing.
