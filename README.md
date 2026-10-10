@@ -17,25 +17,25 @@ The numbering follows the existing repository; Project 8 is not currently includ
 | **5. Semantic Knowledge Retrieval System**       | Searching a knowledge base                            | TF-IDF, Word2Vec, FastText                                                    |
 | **6. Content-Based Product Recommendation Engine**           | Finding products from textual similarity              | TF-IDF, Word2Vec, FastText; FastText application                              |
 | **7. Neural Text Prediction & Generation System**             | Predicting and generating text continuations          | SimpleRNN, LSTM, GRU                                                          |
-| **9. Multilingual Neural Translation System**             | Multilingual support-message translation              | NLLB-200 distilled 600M                                                       |
-| **10. AI-Powered Legal Document Summarizer**              | Summarizing English legal text                        | BART-large-CNN                                                                |
-| **11. AI-Powered Resume Screening & Candidate Ranking System**                | Resume–job description matching and entity extraction | BGE embeddings, BERT NER                                                      |
-| **12. Clinical Named Entity Recognition System**                  | Medical named entity recognition experiments          | spaCy Transformers, BioClinicalBERT                                           |
-| **13. Transformer-Based Question Answering System**              | Extracting answers from supplied passages             | DistilBERT, SQuAD                                                             |
+| **8. Multilingual Neural Translation System**             | Multilingual support-message translation              | NLLB-200 distilled 600M                                                       |
+| **9. AI-Powered Legal Document Summarizer**              | Summarizing English legal text                        | BART-large-CNN                                                                |
+| **10. AI-Powered Resume Screening & Candidate Ranking System**                | Resume–job description matching and entity extraction | BGE embeddings, BERT NER                                                      |
+| **11. Clinical Named Entity Recognition System**                  | Medical named entity recognition experiments          | spaCy Transformers, BioClinicalBERT                                           |
+| **12. Transformer-Based Question Answering System**              | Extracting answers from supplied passages             | DistilBERT, SQuAD                                                             |
 
 ## Featured Applications
 
 ### Semantic Search and Recommendations
 
-- **Legal Clause Similarity:** Retrieves clauses using Word2Vec and cosine similarity.
+- **Legal Document Similarity & Retrieval Engine:** Retrieves clauses using Word2Vec and cosine similarity.
 - **Semantic Similarity Engine:** Compares TF-IDF, Word2Vec, and FastText retrieval.
-- **Product Recommendation:** Uses FastText product vectors with a FastAPI backend and React frontend.
+- **Content-Based Product Recommendation Engine:** Uses FastText product vectors with a FastAPI backend and React frontend.
 
 Project documentation:
 
-- [Legal Clause Similarity](./Project%204%20Legal%20Clause%20Similarity%20Engine/README.md)
-- [Semantic Similarity Engine](./Project%205%20Semantic%20Similarity%20Engine/semantic_similarity_fastapi/README.md)
-- [Product Recommendation](./Project%206%20Product%20Recommendation%20Similarity%20System/README.md)
+- [Legal Document Similarity & Retrieval Engin](./Project%204%20Legal%20Clause%20Similarity%20Engine/README.md)
+- [Semantic Knowledge Retrieval System](./Project%205%20Semantic%20Similarity%20Engine/semantic_similarity_fastapi/README.md)
+- [Content-Based Product Recommendation Engine](./Project%206%20Product%20Recommendation%20Similarity%20System/README.md)
 
 ### Next Word Studio
 
