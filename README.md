@@ -1,4 +1,4 @@
-# NLP Projects — Learning and Applications
+# NLP Projects — Applied NLP Portfolio
 
 A collection of Natural Language Processing projects covering text classification, semantic similarity, recommendations, text generation, translation, summarization, named entity recognition, and question answering.
 
@@ -6,22 +6,29 @@ This repository documents my hands-on learning through notebooks, modular Python
 
 ## Project Guide
 
-The numbering follows the existing repository; Project 8 is not currently included.
+Explore 12 projects spanning classical NLP, recurrent neural networks, and Transformer applications. Each project name below links to its current repository directory.
 
 | Project                                 | Focus                                                 | Methods and models                                                            |
 | --------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------- |
-| **1. Customer Sentiment Intelligence System**       | Sentiment analysis of customer reviews                | Bag of Words, TF-IDF, Word2Vec; application uses a saved classifier and VADER |
-| **2. Intelligent Email Spam Detection System** | Classifying email text                                | CountVectorizer, saved classification model, FastAPI                          |
-| **3. Automated News Categorization Engine**              | Categorizing news articles                            | TF-IDF, saved classification model, FastAPI                                   |
-| **4. Legal Document Similarity & Retrieval Engine**          | Retrieving similar legal clauses                      | Word2Vec, averaged word embeddings, cosine similarity                         |
-| **5. Semantic Knowledge Retrieval System**       | Searching a knowledge base                            | TF-IDF, Word2Vec, FastText                                                    |
-| **6. Content-Based Product Recommendation Engine**           | Finding products from textual similarity              | TF-IDF, Word2Vec, FastText; FastText application                              |
-| **7. Neural Text Prediction & Generation System**             | Predicting and generating text continuations          | SimpleRNN, LSTM, GRU                                                          |
-| **8. Multilingual Neural Translation System**             | Multilingual support-message translation              | NLLB-200 distilled 600M                                                       |
-| **9. AI-Powered Legal Document Summarizer**              | Summarizing English legal text                        | BART-large-CNN                                                                |
-| **10. AI-Powered Resume Screening & Candidate Ranking System**                | Resume–job description matching and entity extraction | BGE embeddings, BERT NER                                                      |
-| **11. Clinical Named Entity Recognition System**                  | Medical named entity recognition experiments          | spaCy Transformers, BioClinicalBERT                                           |
-| **12. Transformer-Based Question Answering System**              | Extracting answers from supplied passages             | DistilBERT, SQuAD                                                             |
+| [**01. Customer Sentiment Intelligence System**](./01%20-%20Customer%20Sentiment%20Intelligence%20System/)       | Sentiment analysis of customer reviews                | Bag of Words, TF-IDF, Word2Vec; application uses a saved classifier and VADER |
+| [**02. Intelligent Email Spam Detection System**](./02%20-%20Intelligent%20Email%20Spam%20Detection%20System/) | Classifying email text                                | CountVectorizer, saved classification model, FastAPI                          |
+| [**03. Automated News Categorization Engine**](./03%20-%20Automated%20News%20Categorization%20Engine/)              | Categorizing news articles                            | TF-IDF, saved classification model, FastAPI                                   |
+| [**04. Legal Document Similarity & Retrieval Engine**](./04%20-%20Legal%20Document%20Similarity%20%26%20Retrieval%20Engine/)          | Retrieving similar legal clauses                      | Word2Vec, averaged word embeddings, cosine similarity                         |
+| [**05. Semantic Similarity Engine**](./05%20-%20Semantic%20Similarity%20Engine/)       | Searching a knowledge base                            | TF-IDF, Word2Vec, FastText                                                    |
+| [**06. Content-Based Product Recommendation Engine**](./06%20-%20Content-Based%20Product%20Recommendation%20Engine/)           | Finding products from textual similarity              | TF-IDF, Word2Vec, FastText; FastText application                              |
+| [**07. Neural Text Prediction & Generation System**](./07%20-Neural%20Text%20Prediction%20%26%20Generation%20System/)             | Predicting and generating text continuations          | SimpleRNN, LSTM, GRU                                                          |
+| [**08. Multilingual Neural Translation System**](./08%20-%20%20Multilingual%20Neural%20Translation%20System/)             | Multilingual support-message translation              | NLLB-200 distilled 600M                                                       |
+| [**09. AI-Powered Legal Document Summarizer**](./09%20-%20%20AI-Powered%20Legal%20Document%20Summarizer/)              | Summarizing English legal text                        | BART-large-CNN                                                                |
+| [**10. AI-Powered Resume Screening & Candidate Ranking System**](./10%20-%20AI-Powered%20Resume%20Screening%20%26%20Candidate%20Ranking%20System/)                | Resume–job description matching and entity extraction | BGE embeddings, BERT NER                                                      |
+| [**11. Clinical Named Entity Recognition System**](./11%20-%20Clinical%20Named%20Entity%20Recognition%20System/)                  | Medical named entity recognition experiments          | spaCy Transformers, BioClinicalBERT                                           |
+| [**12. Transformer-Based Question Answering System**](./12%20-%20Transformer-Based%20Question%20Answering%20System/)              | Extracting answers from supplied passages             | DistilBERT, SQuAD                                                             |
+
+## Skills Demonstrated
+
+- Building text preprocessing, feature extraction, classification, and retrieval pipelines.
+- Comparing sparse text representations, word embeddings, and recurrent neural architectures.
+- Integrating pretrained Transformers into translation, summarization, document matching, and question-answering workflows.
+- Organizing inference services, browser interfaces, model artifacts, and application tests.
 
 ## Featured Applications
 
@@ -33,27 +40,27 @@ The numbering follows the existing repository; Project 8 is not currently includ
 
 Project documentation:
 
-- [Legal Document Similarity & Retrieval Engin](./Project%204%20Legal%20Clause%20Similarity%20Engine/README.md)
-- [Semantic Knowledge Retrieval System](./Project%205%20Semantic%20Similarity%20Engine/semantic_similarity_fastapi/README.md)
-- [Content-Based Product Recommendation Engine](./Project%206%20Product%20Recommendation%20Similarity%20System/README.md)
+- [Legal Document Similarity & Retrieval Engine](./04%20-%20Legal%20Document%20Similarity%20%26%20Retrieval%20Engine/README.md)
+- [Semantic Similarity Engine](./05%20-%20Semantic%20Similarity%20Engine/semantic_similarity_fastapi/README.md)
+- [Content-Based Product Recommendation Engine](./06%20-%20Content-Based%20Product%20Recommendation%20Engine/README.md)
 
 ### Next Word Studio
 
 The notebook compares RNN, LSTM, and GRU models. The local browser application uses an exported GRU model to generate continuations and display next-word suggestions.
 
-[Setup and model import instructions](./Project%207%20Next%20Word%20Prediction%28RNN%2CLSTM%2CGRU%29/next-word-app/README.md)
+[Setup and model import instructions](./07%20-Neural%20Text%20Prediction%20%26%20Generation%20System/next-word-app/README.md)
 
 ### Language Studio
 
 A Streamlit translation application using `facebook/nllb-200-distilled-600M`, with support for English, French, Spanish, Hindi, and Tamil. Includes source-language detection and protection of technical identifiers.
 
-[Setup and usage](./Project%209%20Language%20Translation%20_%20Transformer/Language-Studio/README.md)
+[Setup and usage](./08%20-%20%20Multilingual%20Neural%20Translation%20System/Language-Studio/README.md)
 
 ### Legal Summary Studio
 
 A Flutter Web frontend and Flask backend using `facebook/bart-large-cnn`. Supports summary-length controls, pattern-based fact comparisons, and optional ROUGE evaluation against a reference summary.
 
-[Setup and usage](./Project%2010%20Text%20Summarization%20System/legal_summary_studio/README.md)
+[Setup and usage](./09%20-%20%20AI-Powered%20Legal%20Document%20Summarizer/legal_summary_studio/README.md)
 
 ### Resume Screening
 
@@ -61,7 +68,7 @@ A FastAPI and React application combining `BAAI/bge-large-en-v1.5` embeddings wi
 
 Similarity scores describe textual matching. The normalized fit score is relative to the uploaded candidate pool, not a qualification percentage.
 
-[Setup and usage](./Project%2011%20Resume%20Screening%20System%20-%20NER/README.md)
+[Setup and usage](./10%20-%20AI-Powered%20Resume%20Screening%20%26%20Candidate%20Ranking%20System/README.md)
 
 ### Extractive Question Answering
 
@@ -69,7 +76,7 @@ A DistilBERT application with FastAPI and a browser interface. It selects answer
 
 The notebook filename mentions SQuADv2, but its dataset-loading code uses `rajpurkar/squad`—SQuAD v1. Reliable unanswerable-question detection should not be assumed.
 
-[Setup and model preparation](./Project%2013%20Question%20Answering%20AI%20System/question-answering-app/README.md)
+[Setup and model preparation](./12%20-%20Transformer-Based%20Question%20Answering%20System/question-answering-app/README.md)
 
 ## Technology Stack
 
@@ -122,7 +129,7 @@ Install the project's dependencies from the directory containing its requirement
 python -m pip install -r requirements.txt
 ```
 
-Some applications keep this file inside `backend/`. There is no shared root-level dependency file.
+Some applications keep this file inside `backend/`. There is no shared root-level dependency file. Follow each application's Python-version requirements and any provided lock file; React interfaces also require Node.js, and the summarization interface requires Flutter.
 
 ### 3. Prepare datasets and models
 
@@ -132,7 +139,7 @@ Check the project's instructions before launching:
 - **Product Recommendation:** Export the prepared product CSV, FastText model, and product vectors. Keep CSV rows aligned with vector rows.
 - **Next Word Studio:** Import the GRU bundle containing `best_gru.keras`, `tokenizer.json`, and `config.json`.
 - **Question Answering:** Place the exported DistilBERT model and tokenizer files in the application's `model/` directory.
-- **Healthcare NER:** Provide the spaCy training, development, and test datasets and review the Colab configuration paths.
+- **Clinical NER:** Provide the spaCy training, development, and test datasets and review the Colab configuration paths.
 - **Transformer applications:** Allow internet access and sufficient disk space for the first model download.
 
 ### 4. Run notebooks or applications
@@ -144,7 +151,7 @@ python -m pip install notebook
 jupyter notebook
 ```
 
-Notebooks using `google.colab` or Google Drive paths require Colab or local adaptations.
+Notebooks using `google.colab` or Google Drive paths require Colab or local adaptations. Some project-level guides retain older local directory names; use the current project links above when navigating this repository.
 
 Application entry points differ. Use the linked project documentation for the correct startup commands, frontend requirements, and ports.
 
