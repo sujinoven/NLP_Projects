@@ -10,18 +10,18 @@ The numbering follows the existing repository; Project 8 is not currently includ
 
 | Project                                 | Focus                                                 | Methods and models                                                            |
 | --------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------- |
-| **1. Customer Feedback Analysis**       | Sentiment analysis of customer reviews                | Bag of Words, TF-IDF, Word2Vec; application uses a saved classifier and VADER |
-| **2. Email Spam vs Ham Classification** | Classifying email text                                | CountVectorizer, saved classification model, FastAPI                          |
-| **3. News Classification**              | Categorizing news articles                            | TF-IDF, saved classification model, FastAPI                                   |
-| **4. Legal Clause Similarity**          | Retrieving similar legal clauses                      | Word2Vec, averaged word embeddings, cosine similarity                         |
-| **5. Semantic Similarity Engine**       | Searching a knowledge base                            | TF-IDF, Word2Vec, FastText                                                    |
-| **6. Product Recommendation**           | Finding products from textual similarity              | TF-IDF, Word2Vec, FastText; FastText application                              |
-| **7. Next Word Prediction**             | Predicting and generating text continuations          | SimpleRNN, LSTM, GRU                                                          |
-| **9. Language Translation**             | Multilingual support-message translation              | NLLB-200 distilled 600M                                                       |
-| **10. Text Summarization**              | Summarizing English legal text                        | BART-large-CNN                                                                |
-| **11. Resume Screening**                | Resume–job description matching and entity extraction | BGE embeddings, BERT NER                                                      |
-| **12. Healthcare NER**                  | Medical named entity recognition experiments          | spaCy Transformers, BioClinicalBERT                                           |
-| **13. Question Answering**              | Extracting answers from supplied passages             | DistilBERT, SQuAD                                                             |
+| **1. Customer Sentiment Intelligence System**       | Sentiment analysis of customer reviews                | Bag of Words, TF-IDF, Word2Vec; application uses a saved classifier and VADER |
+| **2. Intelligent Email Spam Detection System** | Classifying email text                                | CountVectorizer, saved classification model, FastAPI                          |
+| **3. Automated News Categorization Engine**              | Categorizing news articles                            | TF-IDF, saved classification model, FastAPI                                   |
+| **4. Legal Document Similarity & Retrieval Engine**          | Retrieving similar legal clauses                      | Word2Vec, averaged word embeddings, cosine similarity                         |
+| **5. Semantic Knowledge Retrieval System**       | Searching a knowledge base                            | TF-IDF, Word2Vec, FastText                                                    |
+| **6. Content-Based Product Recommendation Engine**           | Finding products from textual similarity              | TF-IDF, Word2Vec, FastText; FastText application                              |
+| **7. Neural Text Prediction & Generation System**             | Predicting and generating text continuations          | SimpleRNN, LSTM, GRU                                                          |
+| **9. Multilingual Neural Translation System**             | Multilingual support-message translation              | NLLB-200 distilled 600M                                                       |
+| **10. AI-Powered Legal Document Summarizer**              | Summarizing English legal text                        | BART-large-CNN                                                                |
+| **11. AI-Powered Resume Screening & Candidate Ranking System**                | Resume–job description matching and entity extraction | BGE embeddings, BERT NER                                                      |
+| **12. Clinical Named Entity Recognition System**                  | Medical named entity recognition experiments          | spaCy Transformers, BioClinicalBERT                                           |
+| **13. Transformer-Based Question Answering System**              | Extracting answers from supplied passages             | DistilBERT, SQuAD                                                             |
 
 ## Featured Applications
 
